@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Dropdown from './components/Dropdown';
+import List from './components/List';
 import { pokeParse } from './helpers';
 import axios from 'axios';
 import './App.css';
@@ -39,6 +40,9 @@ function App() {
         habitats={habitats}
         selectHabitat={selectHabitat}
         pokeSearch={pokeSearch}
+      />
+      <List
+        pokemon={pokemon}
       />
     </div>
   );

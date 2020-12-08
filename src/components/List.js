@@ -8,7 +8,7 @@ export default function List({ pokemon }) {
         return (
           <div name="pokeCard">
             <a
-              href={pokedexUrl(mon.id, mon.name)}
+              href={pokedexUrl(mon.name, mon.id)}
               rel="noreferrer"
               target="_blank">
                 {mon.name}
