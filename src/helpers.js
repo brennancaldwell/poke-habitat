@@ -17,6 +17,11 @@ function nameParse(string) {
   return capitalized[0];
 }
 
+function pokedexUrl(name, id) {
+  return `https://pokemon.gameinfo.io/en/pokemon/${id}-${name}`;
+}
+
 export {
   pokeParse,
+  pokedexUrl,
 }

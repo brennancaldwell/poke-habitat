@@ -34,11 +34,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>hello world</h1>
+      <h1>Poké Habitat</h1>
       <Dropdown
         habitats={habitats}
         selectHabitat={selectHabitat}
-        currentHabitat={currentHabitat}
         pokeSearch={pokeSearch}
       />
     </div>
