@@ -8,10 +8,10 @@ export default function List({ pokemon, searchPending }) {
   }
 
   return (
-    <div>
+    <div className="list">
       {pokemon.map(mon => {
         return (
-          <div name="pokeCard">
+          <div className="pokeCard">
             <a
               href={pokedexUrl(mon.name, mon.id)}
               rel="noreferrer"
