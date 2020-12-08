@@ -1,12 +1,12 @@
-function terrainParse(array) {
-  const habitatOptions = [];
+function pokeParse(array) {
+  const pokeOptions = [];
   array.forEach(location  => {
     const name = nameParse(location.name),
           urlSplit = location.url.split('/');
-    habitatOptions.push({name,
+    pokeOptions.push({name,
                           id: urlSplit[urlSplit.length - 2]})
   })
-  return habitatOptions;
+  return pokeOptions;
 }
 
 function nameParse(string) {
@@ -18,5 +18,5 @@ function nameParse(string) {
 }
 
 export {
-  terrainParse,
+  pokeParse,
 }

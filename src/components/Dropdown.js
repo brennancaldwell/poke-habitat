@@ -1,11 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export default function Dropdown({ habitats, setHabitat }) {
-
-  function selectHabitat(e) {
-    setHabitat(e.target.value);
-  }
+export default function Dropdown({ habitats, selectHabitat, pokeSearch }) {
 
   if (habitats.length === 0) return (<h2>Loading...</h2>)
 
@@ -15,6 +11,7 @@ export default function Dropdown({ habitats, setHabitat }) {
       <select name="habitats" onChange={selectHabitat}>
         {habitats.map(location => <option value={location.id}>{location.name}</option>)}
       </select>
+      <button onClick={pokeSearch}>Search</button>
     </div>
   )
 };
