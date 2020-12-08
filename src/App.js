@@ -9,16 +9,19 @@ function App() {
   const [ habitats, setHabitats ] = useState([]);
   const [ currentHabitat, setCurrentHabitat ] = useState('');
   const [ pokemon, setPokemon ] = useState([]);
+  const [ searchPending, setSearchPending ] = useState(false);
 
   function selectHabitat(e) {
     setCurrentHabitat(e.target.value);
   }
 
   function pokeSearch() {
+    setSearchPending(true);
     axios.get(`https://pokeapi.co/api/v2/pokemon-habitat/${currentHabitat}/`)
           .then(data => {
             let pokemonOptions = pokeParse(data.data['pokemon_species']);
             setPokemon(pokemonOptions);
+            setSearchPending(false);
           })
   }
 
@@ -31,8 +34,6 @@ function App() {
         })
   },[])
 
-  console.log(pokemon);
-
   return (
     <div className="App">
       <h1>Poké Habitat</h1>
@@ -43,6 +44,7 @@ function App() {
       />
       <List
         pokemon={pokemon}
+        searchPending={searchPending}
       />
     </div>
   );
