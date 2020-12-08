@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { terrainParse } from './helpers';
 import axios from 'axios';
 import './App.css';
 
@@ -8,17 +9,7 @@ function App() {
 
   useEffect(() => {
     axios.get('https://pokeapi.co/api/v2/pokemon-habitat')
-        .then(data => {
-          const habitatOptions = [];
-          const terrain = data.data.results;
-          terrain.forEach(location  => {
-            const name = location.name;
-            const urlSplit = location.url.split('/');
-            habitatOptions.push({name,
-                                  id: urlSplit[urlSplit.length - 2]})
-          })
-          setHabitats(habitatOptions);
-        })
+        .then(data => setHabitats(terrainParse(data.data.results)))
   },[])
 
   console.log(habitats);
