@@ -4,15 +4,21 @@
 
 body {
   background-color: rgb(2, 175, 2);
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
   font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+h2 {
+
 }
 
 .searchBox {
-  font-family: 'Roboto', sans-serif;
   font-style: italic;
   width: 200px;
   margin: 0 auto;
@@ -40,7 +46,6 @@ h1 {
 }
 
 .pokeCard {
-  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   padding: 30px;
   background-color: rgb(255, 230, 0);

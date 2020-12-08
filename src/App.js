@@ -8,6 +8,7 @@ import './App.css';
 function App() {
   const [ habitats, setHabitats ] = useState([]);
   const [ currentHabitat, setCurrentHabitat ] = useState('');
+  const [ searchedHabitat, setSearchedHabitat ] = useState('');
   const [ pokemon, setPokemon ] = useState([]);
   const [ searchPending, setSearchPending ] = useState(false);
 
@@ -21,6 +22,7 @@ function App() {
           .then(data => {
             let pokemonOptions = pokeParse(data.data['pokemon_species']);
             setPokemon(pokemonOptions);
+            setSearchedHabitat(currentHabitat);
             setSearchPending(false);
           })
   }
@@ -45,6 +47,8 @@ function App() {
       <List
         pokemon={pokemon}
         searchPending={searchPending}
+        searchedHabitat={searchedHabitat}
+        habitats={habitats}
       />
     </div>
   );
