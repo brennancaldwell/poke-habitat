@@ -8,11 +8,12 @@ body {
 
 h1 {
   font-family: 'Roboto', sans-serif;
-  font-style: bold;
+  font-weight: bold;
 }
 
 .searchBox {
   font-family: 'Roboto', sans-serif;
+  font-style: italic;
   width: 200px;
   margin: 0 auto;
   background-color: rgb(255, 230, 0);
@@ -54,4 +55,5 @@ h1 {
 a {
   text-decoration: none;
   color: blue;
+  font-weight: bold;
 }

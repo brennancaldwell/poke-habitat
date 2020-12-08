@@ -11,14 +11,13 @@ export default function List({ pokemon, searchPending }) {
     <div className="list">
       {pokemon.map(mon => {
         return (
-          <div className="pokeCard">
             <a
+              className="pokeCard"
               href={pokedexUrl(mon.name, mon.id)}
               rel="noreferrer"
               target="_blank">
                 {mon.name}
-              </a>
-          </div>
+            </a>
         )
       })}
     </div>
