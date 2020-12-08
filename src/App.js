@@ -6,19 +6,24 @@ import './App.css';
 
 function App() {
   const [ habitats, setHabitats ] = useState('');
+  const [ currentHabitat, setCurrentHabitat ] = useState('');
 
 
   useEffect(() => {
     axios.get('https://pokeapi.co/api/v2/pokemon-habitat')
-        .then(data => setHabitats(terrainParse(data.data.results)))
+        .then(data => {
+          let habitatOptions = terrainParse(data.data.results);
+          setHabitats(habitatOptions);
+          setCurrentHabitat(habitatOptions[0].id);
+        })
   },[])
 
-  console.log(habitats);
+  console.log(habitats, currentHabitat);
 
   return (
     <div className="App">
       <h1>hello world</h1>
-      <Dropdown />
+      <Dropdown habitats={habitats} />
     </div>
   );
 }

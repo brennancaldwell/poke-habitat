@@ -1,7 +1,13 @@
 import React from 'react';
 
-export default function Dropdown() {
+export default function Dropdown({ habitats }) {
+  if (habitats.length === 0) return (<h2>Loading...</h2>)
   return (
-    <h2>Dropdown</h2>
+    <div>
+      <label for="habitats">Choose Habitat: </label>
+      <select name="habitats">
+        {habitats.map(location => <option value={location.id}>{location.name}</option>)}
+      </select>
+    </div>
   )
 };
