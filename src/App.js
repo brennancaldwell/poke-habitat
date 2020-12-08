@@ -23,7 +23,10 @@ function App() {
   return (
     <div className="App">
       <h1>hello world</h1>
-      <Dropdown habitats={habitats} />
+      <Dropdown
+        habitats={habitats}
+        setHabitat={setCurrentHabitat}
+      />
     </div>
   );
 }
