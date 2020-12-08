@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# poke-habitat
+
+What Pokémon can be found lurking in caves? In the forest? Find out with poke-habitat!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
