@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Dropdown from './components/Dropdown';
 import { terrainParse } from './helpers';
 import axios from 'axios';
 import './App.css';
@@ -17,6 +18,7 @@ function App() {
   return (
     <div className="App">
       <h1>hello world</h1>
+      <Dropdown />
     </div>
   );
 }
