@@ -14,15 +14,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Poké Habitat allows users to find out which Pokémon can be found in various terrain types. It makes calls to the [PokéAPI](https://pokeapi.co/).
 
-![Main Page](./assets/pokehabitat.png?raw=true)
+![Main Page](./screenshots/pokehabitat.png?raw=true)
 
 Because there are a finite number of available habitats on the PokéAPI (nine as of this writing), the application, once mounted, makes a primary call to ```https://pokeapi.co/api/v2/pokemon-habitat/``` in order to populate a drop-down box with terrain options.
 
-![Dropdown](./assets/dropdown.png?raw=true)
+![Dropdown](./screenshots/dropdown.png?raw=true)
 
 When a desired terrain is selected, simply hit the search button. The page will soon be populated by cards representing Pokémon that can be found in the selected habitat.
 
-![Pokésearch](./assets/pokesearch.png?raw=true)
+![Pokésearch](./screenshots/pokesearch.png?raw=true)
 
 Clicking on a card will take the user to a corresponding entry in the Pokédex at ```https://pokemon.gameinfo.io```.
 
